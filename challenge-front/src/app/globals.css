@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    @apply no-underline list-none;
+}
+
+
+body {
+    @apply font-sans;
+}
+
