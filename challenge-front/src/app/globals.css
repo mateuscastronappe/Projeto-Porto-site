@@ -27,6 +27,9 @@ body {
     .cabecalho nav ul li {
         font-size: 1.20rem; 
     }
+    .botaoAddPergunta:hover{
+        @apply text-blue-300 ;
+    }
     
 }
 
