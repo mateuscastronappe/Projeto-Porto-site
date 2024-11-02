@@ -1,1 +1,8 @@
-[]
+{
+  "perguntas": [
+    "Quais são os valores de alinhamento ?",
+    "Quais são os valores dos planos?",
+    "Quanto tempo demora para processar o pagamento?",
+    "Qual é o valor de troca de pneus?"
+  ]
+}
