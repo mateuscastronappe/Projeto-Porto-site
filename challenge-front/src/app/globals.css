@@ -12,3 +12,21 @@ body {
     @apply font-sans;
 }
 
+@layer components {
+    .cabecalho {
+        @apply h-20;
+      }
+    
+      .cabecalho li {
+        @apply inline m-5;
+      }
+  
+    .cabecalho li a:hover {
+        @apply text-blue-300; 
+    }
+    .cabecalho nav ul li {
+        font-size: 1.20rem; 
+    }
+    
+}
+
