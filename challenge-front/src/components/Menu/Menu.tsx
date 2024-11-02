@@ -8,6 +8,7 @@ export default function Menu() {
                 <li><Link href="/pages/ajuda">Ajuda</Link></li>
                 <li><Link href="/pages/sobre-nos">Sobre nós</Link></li>
                 <li><Link href="/pages/planos">Planos</Link></li>
+                <li><Link href="/pages">Consultoria</Link></li>
                 <li><Link href="/pages/integrantes">Integrantes</Link></li>
             </ul>
         </nav>
