@@ -13,12 +13,9 @@ const PlanosEPrecos = () => {
   return (
     <>
       <div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5 mt-[3%]">
-          <div className="text-center">
-            <h1 className="bg-gradient-to-l from-[#67caf8] via-[#3c78d3] to-[#67caf8] text-transparent bg-clip-text text-[40px]">
-              Escolha o Plano Ideal Para Você
-              </h1>
-            
+        <div className="containerPlanos">
+          <div className="planos">
+            <h1 className="titulo-escolha">Escolha o Plano Ideal Para Você</h1>
             {/* Silver Plan */}
             <PlanoCard
               id="silver-plan"
