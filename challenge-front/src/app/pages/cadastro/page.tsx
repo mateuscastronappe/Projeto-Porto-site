@@ -49,7 +49,7 @@ export default function Cadastro() {
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <p>
             Já tem uma conta?{' '}
-            <Link href="/login">
+            <Link href="/pages/login">
               <span className="facaLoginCadastro">Faça login aqui</span>
             </Link>
           </p>
