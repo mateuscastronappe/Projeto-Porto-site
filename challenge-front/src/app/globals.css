@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
     @apply no-underline list-none;
 }
-
 
 body {
     @apply font-bold;
@@ -14,31 +12,77 @@ body {
 
 @layer components {
     .cabecalho {
-        @apply h-20;
-      }
+        @apply h-20 text-black inline-flex items-center mx-auto pl-[20%] h-36 w-full max-w-screen-xl;
+    }
+    .cabecalho h1{
+        @apply mr-10 text-3xl font-bold;
+    }
     
-      .cabecalho li {
+    .cabecalho li {
         @apply inline m-5;
-      }
-  
+    }
+
     .cabecalho li a:hover {
         @apply text-blue-300; 
     }
+    
     .cabecalho nav ul li {
         font-size: 1.20rem; 
     }
-    .botaoAddPergunta:hover{
-        @apply text-blue-300 ;
+    
+    .botaoAddPergunta:hover {
+        @apply text-blue-300;
     }
+    
     .assinar {
-        @apply inline-block mt-4 px-[100px] py-[15px] bg-[#0055b1] shadow-[inset_0_0_10px_rgba(1,54,88,0.8)] text-white rounded cursor-pointer text-[1.3rem]
+        @apply inline-block mt-4 px-[100px] py-[15px] bg-[#0055b1] shadow-[inset_0_0_10px_rgba(1,54,88,0.8)] text-white rounded cursor-pointer text-[1.3rem];
     }
+    
     .assinar:hover {
         @apply bg-[#4f95ff] shadow-[inset_0_0_10px_rgba(255,255,255,0.8)];
     }
+    
     .card {
-        @apply bg-[#f1f0f0] my-2 mt-2 p-4 rounded-[8px] inline-block w-[250px] shadow-lg transition-transform duration-200 hover:bg-[#a5c9f8] hover:translate-y-[-10px]
+        @apply bg-[#f1f0f0] my-2 mt-2 p-4 rounded-[8px] inline-block w-[250px] shadow-lg transition-transform duration-200 hover:bg-[#a5c9f8] hover:translate-y-[-10px];
+    }
+
+    .form-cadastro {
+        @apply flex flex-col w-[90%] max-w-[600px] my-12 mx-auto p-5 bg-white rounded shadow-lg;
+    }
+
+    .form-cadastro label {
+        @apply mb-1.5 block;
+    }
+
+    .textoCadastroLogin {
+        @apply pl-[16%];
+    }
+
+    .facaLoginCadastro {
+        @apply font-semibold text-[#1961cc];
+    }
+
+    .form-cadastro h1{
+        @apply text-[#00369b] text-xl;
+    }
+
+    .form-cadastro button{
+        @apply flex-1 p-1.5 text-base text-white bg-[#1961cc] border border-[#0e3674] rounded cursor-pointer;
+    } 
+
+    .form-cadastro div {
+        @apply my-3 w-full;
+    }
+
+    .form-cadastro input[type="text"] {
+        @apply block w-[20vw] h-[5vh] rounded border-none shadow-[inset_0_0_10px_rgba(0,0,0,0.8)] outline-[#7b7e7b] pl-[10px];
+    }
+
+    .form-cadastro input[type="checkbox"] {
+        @apply cursor-pointer;
+    }
+
+    .form-cadastro button[type="submit"]:hover {
+        @apply shadow-[inset_0_0_10px_rgba(255,255,255,0.8)];
     }
 }
-
-
