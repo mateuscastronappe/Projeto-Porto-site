@@ -30,10 +30,6 @@ body {
         font-size: 1.20rem; 
     }
     
-    .botaoAddPergunta:hover {
-        @apply text-blue-300;
-    }
-    
     .assinar {
         @apply inline-block mt-4 px-[100px] py-[15px] bg-[#0055b1] shadow-[inset_0_0_10px_rgba(1,54,88,0.8)] text-white rounded cursor-pointer text-[1.3rem];
     }
@@ -84,5 +80,24 @@ body {
 
     .form-cadastro button[type="submit"]:hover {
         @apply shadow-[inset_0_0_10px_rgba(255,255,255,0.8)];
+    }
+    .containerDuvidas {
+       @apply  bg-white p-5 rounded-lg w-1/2 ml-[20%] mt-[2%] shadow-[0_0_10px_rgba(0,35,200,0.4)];
+    }
+    .duvidasFrequentes{
+        @apply text-[#00369b] text-left text-xl;
+    }
+
+    .botaoAddPergunta{
+        @apply flex-1 p-1.5 text-base text-white bg-[#1961cc] border border-[#0e3674] rounded cursor-pointer;
+    }
+    .botaoAddPergunta:hover {
+        @apply text-blue-300;
+    }
+    .perguntasEnviada {
+        @apply text-[#00369b] text-left text-xl;
+    }
+    .formPerguntas input::placeholder{
+        @apply flex-1 p-2.5 text-base placeholder:text-gray-500;
     }
 }
