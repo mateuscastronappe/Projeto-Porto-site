@@ -13,7 +13,7 @@ export default function Home() {
             Na Porto, adicionamos agilidade e tecnologia <br /> no seu processo de manutenção.
           </p>
           <a
-            href="/cadastro"
+            href="/pages/cadastro"
             className=" cadastrese border-none text-white py-[16px] px-[24px] text-[30px] mt-1 mb-4 inline-block rounded-[18px] bg-gradient-to-r from-[#0261ab] to-[#0099ff] cursor-pointer"
           >
             Cadastre-se
