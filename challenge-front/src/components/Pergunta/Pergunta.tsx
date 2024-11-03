@@ -47,19 +47,18 @@ const PerguntaForm = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='formPerguntas'>
                 <input
                     type="text"
                     value={pergunta}
                     onChange={(e) => setPergunta(e.target.value)}
                     placeholder="Faça sua pergunta"
-                     required
-                        className="flex-1 p-2.5 text-base placeholder:text-gray-500"
+                    required
                 />
-                <button type="submit" className=" botaoAddPergunta flex-1 p-1.5 text-base text-white bg-[#1961cc] border border-[#0e3674] rounded cursor-pointer">Adicionar</button>
+                <button type="submit" className=" botaoAddPergunta">Adicionar</button>
             </form>
             <div>
-                <h3 className="text-[#00369b] text-left text-xl">Perguntas Enviadas:</h3>
+                <h3 className="perguntasEnviada">Perguntas Enviadas:</h3>
                 <ul>
                     {perguntas.map((p, index) => (
                         <li key={index}>{p}</li>
