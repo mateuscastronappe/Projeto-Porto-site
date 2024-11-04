@@ -1,4 +1,4 @@
-import ServiceCard from '../../../components/Cards/ServiceCard';
+import ServiceCard from '@/components/Cards/ServiceCard';
 import trocaOleoImage from '@/img/troca-oleo.png';
 import freiosImage from '@/img/freios.png';
 import revisaoImage from '@/img/revisao.png';
