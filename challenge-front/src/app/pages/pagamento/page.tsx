@@ -46,7 +46,7 @@ export default function Pagamento() {
             required
           />
 
-          <label htmlFor="numeroCartao">Número do Cartão:</label>
+          <label htmlFor="numeroCartao">Número do Cartão(16):</label>
           <input
             type="text"
             id="numeroCartao"
