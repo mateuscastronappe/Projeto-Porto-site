@@ -21,6 +21,7 @@ const PerguntaForm = () => {
             }
 
             const data = await res.json(); 
+            console.log(data); 
             setPerguntas((prevPerguntas) => [...prevPerguntas, pergunta]);
             window.alert('Pergunta enviada com sucesso!'); 
             setPergunta(''); 
