@@ -2,7 +2,7 @@
 import type { Cliente } from "@/types";
 import { useEffect, useState } from "react";
 
-export default function ClienteComponent() {
+export default function Cliente() {
     const [clientes, setClientes] = useState<Cliente[]>([]);
     const [isEditing, setIsEditing] = useState<number | null>(null);
     const [newCliente, setNewCliente] = useState<Cliente>({
