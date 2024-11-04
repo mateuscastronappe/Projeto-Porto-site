@@ -226,30 +226,79 @@ body {
         @apply bg-[#0052bd];
     }
     .textoNotFound{
-        @apply bg-gradient-to-l from-[#67caf8] via-[#3c78d3] to-[#67caf8] text-transparent bg-clip-text text-[40px] text-center
+        @apply bg-gradient-to-l from-[#67caf8] via-[#3c78d3] to-[#67caf8] text-transparent bg-clip-text text-[40px] text-center;
     }
-    
     .consultoria-container {
         @apply min-h-screen p-8 bg-gray-100;
-      }
+    }
 
-      .consultoria-title {
+    .consultoria-title {
         @apply bg-gradient-to-l from-[#67caf8] via-[#3c78d3] to-[#67caf8] text-transparent bg-clip-text text-[40px] text-center mb-8;
-      }
+    }
 
-      .consultoria-grid {
+    .consultoria-grid {
         @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
-      }
+     }
 
-      .consultoria-card {
+    .consultoria-card {
         @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300;
-      }
+    }
 
-      .consultoria-card-title {
+    .consultoria-card-title {
         @apply text-xl font-semibold mb-4;
-      }
+    }
 
-      .consultoria-card-link {
+    .consultoria-card-link {
         @apply inline-block bg-blue-500 text-white py-2 px-4 rounded-lg text-center hover:bg-blue-600 transition;
-      }
+    }
+
+    .clientes-container {
+        @apply p-6 bg-white rounded-lg shadow-md;
+    }
+
+    .clientes-title {
+        @apply bg-gradient-to-l from-[#67caf8] via-[#3c78d3] to-[#67caf8] text-transparent bg-clip-text text-[40px] text-center mb-8;
+    }
+
+    .clientes-table {
+        @apply min-w-full bg-gray-100 border border-gray-300;
+    }
+
+    .clientes-header {
+        @apply bg-gray-200;
+    }
+
+    .clientes-header-cell {
+        @apply py-2 px-4 border border-gray-300;
+    }
+
+    .clientes-row:hover {
+        @apply bg-gray-50;
+    }
+
+    .clientes-cell {
+        @apply py-2 px-4 border border-gray-300;
+    }
+
+    .clientes-input {
+        @apply py-2 px-4 border border-gray-300 rounded-lg;
+    }
+
+    .clientes-button-save {
+        @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg;
+    }
+
+    .clientes-button-edit {
+        @apply bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-lg;
+    }
+
+    .clientes-button-delete {
+        @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg;
+    }
+
+    .clientes-button-add {
+        @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg;
+    }
+
+      
 }
