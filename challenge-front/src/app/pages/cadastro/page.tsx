@@ -7,16 +7,25 @@ export default function Cadastro() {
   const [username, setUsername] = useState<string>('');
   const [rememberMe, setRememberMe] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const cpfOuCnpj = username.replace(/[^\d]+/g, '');
 
-    
     if (cpfOuCnpj.length === 11 && validarCPF(cpfOuCnpj)) {
+      localStorage.setItem('cpf', cpfOuCnpj);
+      setSuccessMessage('Cadastro realizado com sucesso!');
+      setUsername('');
+      setError(null);
     } else if (cpfOuCnpj.length === 14 && validarCNPJ(cpfOuCnpj)) {
+      localStorage.setItem('cnpj', cpfOuCnpj);
+      setSuccessMessage('Cadastro realizado com sucesso!');
+      setUsername('');
+      setError(null);
     } else {
       setError('Número inválido');
+      setSuccessMessage(null);
     }
   };
 
@@ -47,6 +56,7 @@ export default function Cadastro() {
             <label htmlFor="idLembrar">Lembrar-me</label>
           </div>
           {error && <p style={{ color: 'red' }}>{error}</p>}
+          {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
           <p>
             Já tem uma conta?{' '}
             <Link href="/pages/login">
