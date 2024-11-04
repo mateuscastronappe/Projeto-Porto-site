@@ -6,10 +6,13 @@
 
 ### Sobre o site
 <p>Esse site foi feito com o objetivo de facilitar o chamado e agendamento de manutenções dos automóveis dos usuários, com planos que podem ser assinados para mais benefícios.<p/>
-<p>Tendo uma interface semelhante com a da Porto Seguro, com tons de azul e branco, o site é composto por 4 páginas sendo elas: </p>
+<p>Tendo uma interface semelhante com a da Porto Seguro, com tons de azul e branco, o site é composto por 6 páginas sendo elas: </p>
 <p>
 - Home -> principal <br>
+- Ajuda -> canal de perguntas <br>
+- Sobre nós -> objetivo do grupo <br>
 - Planos e orçamentos -> opções de planos <br>
+- Consultoria -> consultar sobre seus veiculos e dados pessoais <br>
 - integrantes -> grupo criador do projeto <br> 
 </p>
 <p>Tendo também área de login e cadastro para acesso ao site.</p>
