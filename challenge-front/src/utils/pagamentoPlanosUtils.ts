@@ -1,4 +1,3 @@
-
 export const selectPlan = (
   plan: string,
   setSelectedPlan: (plan: string) => void,
