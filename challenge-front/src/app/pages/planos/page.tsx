@@ -21,7 +21,7 @@ const PlanosEPrecos = () => {
           <PlanoCard
             id="silver-plan"
             title="Silver"
-            benefits={['Anúncios', 'Acesso aos Mecânicos', 'Consultoria em dias úteis']}
+            benefits={['Anúncios', 'Acesso aos Mecânicos', 'Consultoria 24h']}
             price="19,90"
             onSelectPlan={() => handleSelectPlan('silver')}
           />
