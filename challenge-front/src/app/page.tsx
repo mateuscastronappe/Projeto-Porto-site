@@ -1,8 +1,8 @@
 export default function Home() {
   return (
     <>
-      <div className=" conteudoProblema">
-        <h1 className=" tituloHome">
+      <div className="conteudoProblema">
+        <h1 className="tituloHome">
           <span className="destacada">Problema</span>{" "}no seu veículo?
         </h1>
         <div className="textosDeEfeito">
