@@ -1,8 +1,8 @@
 import Image from "next/image";
-import gabrielaImage from '../../../img/integrante-gabriela.png';
-import mateusImage from '../../../img/integrante-mateus.png';
-import anaImage from '../../../img/integrante-ana.png';
-import githubLogo from '../../../img/github.png';
+import gabrielaImage from '@/img/integrante-gabriela.png';
+import mateusImage from '@/img/integrante-mateus.png';
+import anaImage from '@/img/integrante-ana.png';
+import githubLogo from '@/img/logo-github.png';
 
 export default function Integrantes() {
   return (
