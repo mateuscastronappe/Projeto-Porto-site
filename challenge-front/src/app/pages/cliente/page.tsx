@@ -6,7 +6,7 @@ export default function ClienteComponent() {
     const [clientes, setClientes] = useState<Cliente[]>([]);
     const [isEditing, setIsEditing] = useState<number | null>(null);
     const [newCliente, setNewCliente] = useState<Cliente>({
-        codigo: 1,  
+        codigo: 0,  
         nome: "",
         cpf: "",
         email: "",
@@ -36,9 +36,10 @@ export default function ClienteComponent() {
             });
             if (response.ok) {
                 const clienteAdicionado = await response.json();
-                console.log("Cliente adicionado:", clienteAdicionado); 
+                console.log("Cliente adicionado:", clienteAdicionado);
                 setClientes(prevClientes => [...prevClientes, clienteAdicionado]);
                 setNewCliente({ codigo: 0, nome: "", cpf: "", email: "", dataDeNascimento: "" });
+                window.location.reload();
             } else {
                 console.error("Erro ao adicionar cliente");
             }
@@ -109,49 +110,106 @@ export default function ClienteComponent() {
             </tr>
         </thead>
         <tbody>
-            {clientes.map(cliente => (
-                <tr key={cliente.codigo} className="clientes-row">
-                    <td className="clientes-cell">{cliente.codigo}</td>
-                    <td className="clientes-cell">
-                        {isEditing === cliente.codigo ? (
-                            <input
-                                type="text"
-                                value={cliente.nome}
-                                onChange={e =>
-                                    setClientes(
-                                        clientes.map(c =>
-                                            c.codigo === cliente.codigo
-                                                ? { ...c, nome: e.target.value }
-                                                : c
-                                        )
-                                    )
-                                }
-                                className="clientes-input"
-                            />
-                        ) : (
-                            cliente.nome
-                        )}
-                    </td>
-                    <td className="clientes-cell">{cliente.cpf}</td>
-                    <td className="clientes-cell">{cliente.email}</td>
-                    <td className="clientes-cell">{cliente.dataDeNascimento}</td>
-                    <td className="clientes-cell">
-                        {isEditing === cliente.codigo ? (
-                            <button onClick={() => handleSave(cliente.codigo)} className="clientes-button-save">
-                                Salvar
-                            </button>
-                        ) : (
-                            <button onClick={() => handleEdit(cliente.codigo)} className="clientes-button-edit">
-                                Editar
-                            </button>
-                        )}
-                        <button onClick={() => handleDelete(cliente.codigo)} className="clientes-button-delete">
-                            Excluir
-                        </button>
-                    </td>
-                </tr>
-            ))}
-        </tbody>
+    {clientes.map(cliente => (
+        <tr key={cliente.codigo} className="clientes-row">
+            <td className="clientes-cell">{cliente.codigo}</td>
+            <td className="clientes-cell">
+                {isEditing === cliente.codigo ? (
+                    <input
+                        type="text"
+                        value={cliente.nome}
+                        onChange={e =>
+                            setClientes(
+                                clientes.map(c =>
+                                    c.codigo === cliente.codigo
+                                        ? { ...c, nome: e.target.value }
+                                        : c
+                                )
+                            )
+                        }
+                        className="clientes-input"
+                    />
+                ) : (
+                    cliente.nome
+                )}
+            </td>
+            <td className="clientes-cell">
+                {isEditing === cliente.codigo ? (
+                    <input
+                        type="text"
+                        value={cliente.cpf}
+                        onChange={e =>
+                            setClientes(
+                                clientes.map(c =>
+                                    c.codigo === cliente.codigo
+                                        ? { ...c, cpf: e.target.value }
+                                        : c
+                                )
+                            )
+                        }
+                        className="clientes-input"
+                    />
+                ) : (
+                    cliente.cpf
+                )}
+            </td>
+            <td className="clientes-cell">
+                {isEditing === cliente.codigo ? (
+                    <input
+                        type="email"
+                        value={cliente.email}
+                        onChange={e =>
+                            setClientes(
+                                clientes.map(c =>
+                                    c.codigo === cliente.codigo
+                                        ? { ...c, email: e.target.value }
+                                        : c
+                                )
+                            )
+                        }
+                        className="clientes-input"
+                    />
+                ) : (
+                    cliente.email
+                )}
+            </td>
+            <td className="clientes-cell">
+                {isEditing === cliente.codigo ? (
+                    <input
+                        type="date"
+                        value={cliente.dataDeNascimento}
+                        onChange={e =>
+                            setClientes(
+                                clientes.map(c =>
+                                    c.codigo === cliente.codigo
+                                        ? { ...c, dataDeNascimento: e.target.value }
+                                        : c
+                                )
+                            )
+                        }
+                        className="clientes-input"
+                    />
+                ) : (
+                    cliente.dataDeNascimento
+                )}
+            </td>
+            <td className="clientes-cell">
+                {isEditing === cliente.codigo ? (
+                    <button onClick={() => handleSave(cliente.codigo)} className="clientes-button-save">
+                        Salvar
+                    </button>
+                ) : (
+                    <button onClick={() => handleEdit(cliente.codigo)} className="clientes-button-edit">
+                        Editar
+                    </button>
+                )}
+                <button onClick={() => handleDelete(cliente.codigo)} className="clientes-button-delete">
+                    Excluir
+                </button>
+            </td>
+        </tr>
+    ))}
+</tbody>
     </table>
 
     <h2 className="clientes-add-title">Adicionar Novo Cliente</h2>
