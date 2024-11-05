@@ -21,7 +21,6 @@
 - Video -> https://youtu.be/YDEoaInuRrA <br>
 - Vercel ->  porto-dun-tau.vercel.app <br>
 - java -> https://github.com/anacarolcg0/sprint4
-GitHub
 
 ### Tecnologias & Ferramentas
 <div style="display: inline_block">
