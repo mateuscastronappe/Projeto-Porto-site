@@ -17,6 +17,11 @@
 </p>
 <p>Tendo também área de login e cadastro para acesso ao site.</p>
 
+### Link do video e vercel
+- Video -> https://youtu.be/YDEoaInuRrA <br>
+- Vercel ->  porto-dun-tau.vercel.app
+
+
 
 
 ### Tecnologias & Ferramentas
